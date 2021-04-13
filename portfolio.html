@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Chua Portfolio</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+body{
+	margin:0;
+    font-family: Papyrus;
+    background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, #d9d9d9 100%);
+    
+}
+.header {
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, #ff99ff 100%);
+  color: white;
+  text-shadow: 2px 2px black;
+  overflow: auto;
+}
+.menu {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, #d9d9d9 100%);
+  border-radius: 20px;
+  border-radius: 20px;
+  border: 2px solid #cc33ff 0%, #ff99ff 100%;
+  text-shadow: 2px 2px black;
+  overflow: auto;
+	}
+.menu a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;  
+  border-radius: 20px;
+  border-radius: 20px;
+  border: 2px solid white;
+  background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, #d9d9d9 100%);
+}
+.menu a.right {
+  float: right;
+  border-radius: 20px;
+  border-radius: 20px;
+  border: 2px white;
+}
+.menu a:hover {
+  background-color: blue;
+  color: black;
+ 
+  
+}
+.bodys {
+-ms-flex: 70%;  flex: 70%;
+  padding: 200px;
+  background: linear-gradient(to bottom, rgb(0, 0, 0) 0%, #d9d9d9 100%);
+  font-size: 20px;
+  color: white;
+text-shadow: 2px 2px black;
+overflow: auto;
+justify-content: center;
+text-align: center;
+}
+.side:hover{
+  width: 450px;
+  height: 450px;
+}
+.side {
+  float: left;
+  clear: left;
+  background: white;
+  padding: 100px;
+  width: 30%;
+  height: 100;
+  color: black;
+  font-family: arial;
+  border-radius: 20px;
+  border: 2px solid grey;
+  border-style: outset;
+  margin-right: 150px;
+  margin-left: 80px;
+  box-shadow: 10px 10px;
+  transition: width 4s, height 4s;
+  overflow: auto;
+
+  }
+ .right {
+  float: right;
+  clear: right;
+  background: white;
+  padding: 100px;
+  width: 30%;
+  height: 140;
+  color: black;
+  font-family: arial;
+  border-radius: 20px;
+  border: 2px solid grey;
+  border-style: outset;
+  margin-top: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  box-shadow: 10px 10px blue;
+  transition: width 4s, height 4s;
+  overflow: auto;
+ }
+ .right:hover{
+  width: 450px;
+  height: 450px;
+}
+button{
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  background-color: violet;
+  overflow: auto;
+}
+button a:hover{
+ color: black;
+background-color: pink;
+}
+.center {
+  -ms-flex: 50%;
+  flex: 50%;
+  float: center;
+  background: white;
+  padding: 50px;
+  color: black;
+  font-family: arial;
+  border-radius: 20px;
+  border-style: outset;
+  border: 2px solid grey;
+  width: 50%;
+  height: 20%;
+  margin: auto;
+}
+.center1 {
+  -ms-flex: 50%;
+  flex: 50%;
+  float: right;
+  background: white;
+  padding: 50px;
+  color: black;
+  font-family: arial;
+  border-radius: 20px;
+  border-top-width: 20px;
+  border-right-width:100px;
+  border-style: outset;
+  border: 2px solid grey;
+  width: 50%;
+  height: 250px;
+  margin: auto;
+  margin-right: 400px;
+  }
+.box {
+  float: left;
+  width: 300px;
+  border: 2px solid black;
+  padding: 50px;
+  margin: 20px;
+  box-shadow: 10px 10px white;
+  overflow: auto;
+}
+.boxl {
+  float: right;
+  width: 300px;
+  border: 2px solid black;
+  padding: 50px;
+  margin: 20px;
+  box-shadow: 10px 10px white;
+  overflow: auto;
+}
+.footers {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height:50px;
+  background: linear-gradient(to bottom, #cc33ff 0%, #ff99ff 100%);
+  color: white;
+  text-align: center;
+  }
+footer {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  position: relative;
+  animation-name: wisp;
+  animation-duration: 5s;
+  animation-direction: reverse;
+  animation: wisp 5s linear 2s infinite alternate;
+}
+@keyframes wisp {
+    0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+#pricing {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: calc(100% / 3);
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+  border-color: black;
+  box-shadow: 5px 5px black;
+  
+}
+
+.product > .level {
+  background-color: black;
+  color: white;
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.product > h2 {
+  margin-top: 15px;
+}
+
+.product > ol {
+  margin: 15px 0;
+}
+
+.product > ol > li {
+  padding: 5px 0;
+}
+
+.product > button {
+  border: 0;
+  margin: 15px 0;
+  background-color: black;
+  font-weight: 400;
+}
+
+.product > button:hover {
+  background-color: purple;
+  transition: background-color 1s;
+}
+
+@media (max-width: 800px) {
+  #pricing {
+    flex-direction: column;
+  }
+  .product {
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+
+  }
+}
+.btn {
+  padding: 0 20px;
+  height: 40px;
+  font-size: 1em;
+  font-weight: 900;
+  text-transform: uppercase;
+  border: 3px black solid;
+  border-radius: 2px;
+  background: transparent;
+  cursor: pointer;
+}
+}
+div.gallery {
+  border: 1px solid black;
+   border: 1px;
+  border-color: black;
+}
+
+div.gallery:hover {
+  border: 1px solid white;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+   border: 1px;
+  border-color: black;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+   border: 1px;
+  border-color: black;
+}
+
+
+.project-tile {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+  border: 1px;
+  border-color: black;
+}
+
+@media only screen and (max-width: 700px) {
+  .project-tile {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .project-tile {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+ content: "";
+  display: table;
+  clear: both;
+  
+}
+#video {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#video > iframe {
+  max-width: 560px;
+  width: 100%;
+}
+
+</style>
+
+<body>
+<section id = "welcome-section">
+	<div class="header">
+
+  		<h1>Chua, Alfred Apten</h1>
+
+  		<h3>student</h3>
+	</div>
+	<footer></footer>
+
+	<div id="navbar" class="menu">
+    
+ 		<a href="index.html" class="active">Home</a>
+    <a href = "info.html">Information</a>
+    <a href="profile.html">Profile</a>
+    <a href="#Contact">Contact</a>
+   
+		</div>
+	<div class= "bodys">
+		<h1>Hi, I'm Alfred Apten U. Chua and i'm a Student</h1>
+		<p>I'M a 2nd year Student of University of Cordillera but still taking 1st year, 2nd year and 3rd year subjects.</p>
+		<p>I support and share files to my fellow students in doing acvities and exam. >_-</p>
+		<footer></footer>
+	</div>
+</section>
+	<section id="pricing">
+      <div class="product" id="rtx-3070">
+        <div class="level">Computer Software and Hardware experience</div>
+        
+       
+          <h2>I live in La Trinidad and I am already familiar with city life</h2>
+         
+          <br>
+        <button class="btn"><a href="profile.html">list of my experience</a></button>
+      </div>
+       <div class="product" id="rtx-3070">
+        <div class="level">Job Experience</div>
+        
+       
+          <h2>I experienced being a computershop attendant and other stuff when there is still no pandemic</h2>
+         
+          <br>
+          
+       
+        
+        <button class="btn"><a href="profile.html">list of my job experience</a></button>
+      </div>
+       <div class="product" id="rtx-3070">
+        <div class="level">SKILLS</div>
+        
+       
+          <h2>My skills differ upon the event or problems that i encounter</h2>
+         
+          <br>
+          
+       
+         <br>
+         
+        <button class="btn"><a href="profile.html">list of my Skills</a></button>
+        <br>
+      </div>
+
+    </section>
+    <section id="pricing">
+      <div class="product" id="Autoworks">
+        <div class="level">EDUCATION</div>
+          <h4>Immaculate Heart of Mary School</h4>
+          <h4>Cordillera Regional Science High School (Grade 7-8)</h4>
+          <h4>San Jose School Of La Trinidad, Inc. (Grade 9-10)</h4>
+          <h4>Benguet State University(Senior High)</h4>
+          <h4>UNIVERSITY OF CORDILLERA (College up to present)</h4>
+          <br>
+        <button class="btn"><a href="profile.html">Profile</a></button>
+      </div>
+    </section>
+
+    <section id="projects">
+    <h1 style="text-align: center; border: 2px; background-color: black; color: white;">PROJECTS</h1>
+    <div class="project-tile">
+  <div class="gallery">
+    <a target="_blank" href="https://www.denofgeek.com/wp-content/uploads/2016/04/one_punch_man_ok.jpg?fit=620%2C382">
+      <img src="https://www.denofgeek.com/wp-content/uploads/2016/04/one_punch_man_ok.jpg?fit=620%2C382" alt="Saitama" width="600" height="400">
+    </a>
+    <h2 style="text-align: center;">ANIME Documentation</h2>
+    <div class="desc"><a href="https://cchua705.github.io/Technical-Documentation/Technical%20Documentation.html">Click here to see Documentation PROJECT</div></a>
+  </div>
+</div>
+
+
+<div class="project-tile">
+  <div class="gallery">
+    <a target="_blank" href="https://github.com/cchua705/Technical-Documentation/blob/main/Capture.PNG?raw=true">
+      <img src="https://github.com/cchua705/Technical-Documentation/blob/main/Capture.PNG?raw=true" alt="Forest" width="600" height="400">
+    </a>
+     <h3 style="text-align: center;">Survey form</h3>
+    <div class="desc"><a href="https://cchua705.github.io/SurveyForm/SurveyForm.html">Click here to see Survey PROJECT</div></a>
+  </div>
+</div>
+
+<div class="project-tile">
+  <div class="gallery">
+    <a target="_blank" href="https://static.carthrottle.com/workspace/uploads/posts/2018/01/5e52c846c4b5f3a669c6ec919724e1e0.jpg">
+      <img src="https://static.carthrottle.com/workspace/uploads/posts/2018/01/5e52c846c4b5f3a669c6ec919724e1e0.jpg" width="600" height="400">
+    </a>
+     <h3 style="text-align: center;">Product landing</h3>
+    <div class="desc"><a href="https://cchua705.github.io/Product-Landing-Page/ProductLandingPage.html">Click here to see Product landing PROJECT</div></a>
+  </div>
+</div>
+
+<div class="project-tile">
+  <div class="gallery">
+    <a target="_blank" href="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ">
+      <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ" alt="html" width="600" height="400">
+    </a>
+     <h3 style="text-align: center;">Tribute</h3>
+    <div class="desc"><a href="https://cchua705.github.io/Tribute-Page/TributePage.html">Click here to see Tribute PROJECT</div></a>
+  </div>
+</div>
+ </section>
+
+
+
+      <div class = "box" id="Contact">
+    <h3>CONTACT NUMBER</h3>
+    <h4>09289758820</h4>
+  </div>
+    <div class = "boxl">
+    <footer></footer>
+    <h3>Email</h3>
+    <h4>cchua705@gmail.com</h4>
+  </div>
+    <div class = "center">
+    <footer></footer>
+    <h3 style="text-align: center;">MY PORTFOLIO (github)</h3>
+    <h4  style="text-align: center;"><a  href = "https://github.com/cchua705/t">click here to see my Portfolio</a></h4>
+
+  </div>
+  <h5 style="text-align: center;"><a href="#welcome-section">back to top</a></h5>
+	<footer></footer>
+</head>
+</body>
+</html>
